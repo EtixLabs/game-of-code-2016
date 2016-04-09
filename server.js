@@ -8,6 +8,7 @@ let proj4 = require('proj4');
 let app = express();
 
 let luxEPSG2169 = '+proj=tmerc +lat_0=49.83333333333334 +lon_0=6.166666666666667 +k=1 +x_0=80000 +y_0=100000 +ellps=intl +towgs84=-193,13.7,-39.3,-0.41,-2.933,2.688,0.43 +units=m +no_defs ';
+
 app.use(cors());
 
 app.get('/', function (req, res) {
@@ -15,7 +16,108 @@ app.get('/', function (req, res) {
 });
 
 app.get('/bus', function (req, res) {
-    request('http://opendata.vdl.lu/odaweb/index.jsp?describe=1').then((data) => {
+    res.send(getBusList());
+});
+
+app.get('/bus/:id', function (req, res) {
+    let id = req.params.id;
+    console.log('Getting stop lists for bus ' + id);
+    request('http://opendata.vdl.lu/odaweb/index.jsp?cat=' + id).then((data) => {
+        console.log('Done.');
+        data = formatBusLineDataForGoogleAPI(JSON.parse(data));
+        res.send(data);
+    });
+});
+
+app.get('/bus/:id/from/:startId/to/:stopId/maths', function (req, res) {
+    let id = req.params.id;
+    let startId = req.params.startId;
+    let stopId = req.params.stopId;
+    let resume = {
+        busNumber: id,
+        start: {
+            id: startId,
+            coords: [],
+            time: new Date()
+        },
+        stop: {
+            id: stopId,
+            coords: [],
+            time: new Date()
+        },
+        distance: 0
+    };
+    console.log('Requesting for stops/paths information for bus ' + id + '...');
+    request('http://opendata.vdl.lu/odaweb/index.jsp?cat=' + id).then((data) => {
+        console.log('Done.');
+        console.log('Formatting Bus Line Data for Google API...');
+        let formattedData = formatBusLineDataForGoogleAPI(JSON.parse(data));
+        console.log('Done.');
+        console.log('Getting coords for start number ' + startId + ' and stop number ' + stopId + '...');
+        let stops = getStopsCoordsByIds(formattedData, [startId, stopId]);
+        resume.start.coords = stops[0].geometry.coordinates;
+        resume.stop.coords = stops[1].geometry.coordinates;
+        console.log('Done.');
+        return Promise.all([
+            getStopApiIdByCoord(res, stops[0]),
+            getStopApiIdByCoord(res, stops[1])
+        ]).then(function (stopApiIds) {
+            return Promise.all([
+                getStopScheduleByApiId(stopApiIds[0]),
+                getStopScheduleByApiId(stopApiIds[1])
+            ]);
+        }).then(function (stopSchedules) {
+            return getBusNumberByKey(id).then(function (busNumber) {
+                resume.start.time = new Date(getNextScheduleByBusNumber(stopSchedules[0], busNumber));
+                resume.stop.time = new Date(getNextScheduleByBusNumber(stopSchedules[1], busNumber));
+                resume.distance = getDistanceBetweenTwoCoords(resume.start.coords, resume.stop.coords);
+                res.send(resume);
+            });;
+        });
+    });
+});
+
+Math.radians = function(degrees) {
+  return degrees * Math.PI / 180;
+};
+
+function getDistanceBetweenTwoCoords(coords1, coords2) {
+    let latFrom = Math.radians(coords1[0]);
+    let lonFrom = Math.radians(coords1[1]);
+    let latTo = Math.radians(coords2[0]);
+    let lonTo = Math.radians(coords2[1]);
+
+    let latDelta = latTo - latFrom;
+    let lonDelta = lonTo - lonFrom;
+
+    let angle = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(latDelta / 2), 2) + Math.cos(latFrom) * Math.cos(latTo) * Math.pow(Math.sin(lonDelta / 2), 2)));
+    return angle * 6371000 * 1.5;
+}
+
+function getNextScheduleByBusNumber(stopSchedule, busNumber) {
+    for (let busLine of stopSchedule.Departure) {
+        if (busLine.Product.line == busNumber) {
+            return busLine.date + 'T' + busLine.time;
+        }
+    }
+    return '';
+}
+
+function getBusNumberByKey(key) {
+    return getBusList().then(function (busesList) {
+        for (let bus of busesList) {
+            if (bus.id == key) {
+                return bus.name.split('-')[1].split(' ')[0];
+            }
+        }
+        return 0;
+    });
+}
+
+function getBusList() {
+    console.log('Getting list of buses');
+    return request('http://opendata.vdl.lu/odaweb/index.jsp?describe=1').then((data) => {
+        console.log('Done.');
         data = JSON.parse(data)['data'];
         let list = [];
         let name = "";
@@ -27,46 +129,15 @@ app.get('/bus', function (req, res) {
                 list.push({name, id});
             }
         }
-        res.send(list);
+        return list;
     });
-});
-
-app.get('/bus/:id', function (req, res) {
-    let id = req.params.id;
-    request('http://opendata.vdl.lu/odaweb/index.jsp?cat=' + id).then((data) => {
-        data = formatBusLineDataForGoogleAPI(JSON.parse(data));
-        res.send(data);
-    });
-});
-
-app.get('/bus/:id/from/:startId/to/:stopId/maths', function (req, res) {
-    let id = req.params.id;
-    let startId = req.params.startId;
-    let stopId = req.params.stopId;
-    console.log('Requesting for stops/paths information for bus ' + id + '...');
-    request('http://opendata.vdl.lu/odaweb/index.jsp?cat=' + id).then((data) => {
-        console.log('Formatting Bus Line Data for Google API...');
-        let formattedData = formatBusLineDataForGoogleAPI(JSON.parse(data));
-        console.log('Getting coords for start number ' + startId + ' and stop number ' + stopId + '...');
-        let stops = getStopsCoordsByIds(formattedData, [startId, stopId]);
-        Promise.all([
-            getStopApiIdByCoord(res, stops[0]),
-            getStopApiIdByCoord(res, stops[1])
-        ]).then(function (stopApiIds) {
-            return Promise.all([
-                getStopScheduleByApiId(stopApiIds[0]),
-                getStopScheduleByApiId(stopApiIds[1])
-            ]);
-        }).then(function (stopSchedules) {
-            res.send(stopSchedules);
-        });
-    });
-});
+}
 
 function getStopScheduleByApiId(stopApiId) {
     let url = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&';
     console.log('Getting stop schedule for stop ' + stopApiId);
     return request(url + stopApiId).then((data) => {
+        console.log('Done.');
         return JSON.parse(data);
     });
 }
@@ -79,6 +150,7 @@ function getStopApiIdByCoord(res, stop) {
 
     console.log('Getting Stop RealTime API Id for ' + stop.properties.name);
     return request(url).then((data) => {
+        console.log('Done.');
         let stopsRet = data.split('\n');
         let stopNames = stopsRet.map(function(stop) {
             return stop.split('@')[1];
