@@ -15,7 +15,7 @@
     <ui-gmap-polyline ng-repeat="path in ctrl.paths" path='path' stroke="path.stroke" ></ui-gmap-polyline>
 </ui-gmap-google-map>
 
-<button ng-click="ctrl.selectStops()">Select Stops</button>
+<button class="btn btn-primary" ng-click="ctrl.selectStops()">Select Stops</button>
 <div ng-show="ctrl.loading">
     <i class="fa-li fa fa-spinner fa-spin"></i>
 </div>
