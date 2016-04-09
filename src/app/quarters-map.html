@@ -1,0 +1,8 @@
+<ui-gmap-google-map center="ctrl.map.center" zoom="ctrl.map.zoom" bounds="ctrl.map.bounds" options="ctrl.map.options">
+    <ui-gmap-polygon path="ctrl.polygon"></ui-gmap-polygon>
+</ui-gmap-google-map>
+
+<button ng-click="ctrl.randomQuarter()">Random quarter !</button>
+
+<select ng-model="ctrl.currentBusLine" ng-options="item as item.i18n.fr.name for item in ctrl.bus"  ng-change="ctrl.changeBusLine()">
+</select>

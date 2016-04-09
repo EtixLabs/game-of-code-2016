@@ -1,8 +1,0 @@
-<ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom'>
-    <ui-gmap-marker ng-repeat="marker in ctrl.markers" idkey='marker.id' coords='marker'></ui-gmap-marker>
-    <ui-gmap-polyline ng-repeat="path in ctrl.paths" path='path'></ui-gmap-polyline>
-</ui-gmap-google-map>
-
-
-<select ng-model="ctrl.currentBusLine" ng-options="item as item.i18n.fr.name for item in ctrl.bus"  ng-change="ctrl.changeBusLine()">
-</select>
