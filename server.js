@@ -16,7 +16,9 @@ app.get('/', function (req, res) {
 });
 
 app.get('/bus', function (req, res) {
-    res.send(getBusList());
+    getBusList().then(function (ret) {
+         res.send(ret);
+    });
 });
 
 app.get('/bus/:id', function (req, res) {
@@ -72,6 +74,7 @@ app.get('/bus/:id/from/:startId/to/:stopId/maths', function (req, res) {
                 resume.start.time = new Date(getNextScheduleByBusNumber(stopSchedules[0], busNumber));
                 resume.stop.time = new Date(getNextScheduleByBusNumber(stopSchedules[1], busNumber));
                 resume.distance = getDistanceBetweenTwoCoords(resume.start.coords, resume.stop.coords);
+                resume.speed = resume.stop.time - resume.start.time;
                 res.send(resume);
             });;
         });
