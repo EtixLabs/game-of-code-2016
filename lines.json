@@ -1,0 +1,521 @@
+{
+    "data": [
+        {
+            "format": "http://geojson.org",
+            "id": "4f33bc2e6613c9dafd6e6907",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Zones eaux"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553ddec59edb05fa3c02cb32",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-9 (Gare Centrale – Neudorf - Cents, Waassertuerm)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de191711dbdb8177af964",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-14 (Gare Centrale-Cents,Waassertuerm)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de5e1711dbdb8177afabf",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-125 (P+R Bouillon-Kirchberg,Luxexpo)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de6ee711dbdb8177afb12",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-CN1 (Bouillon-Gare-Centre-Glacis-Clausen-Neudorf-Cents)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de71d711dbdb8177afb21",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-CN2 (Centre-Limpertsberg-Belair-Merl-Centre)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de75d711dbdb8177afb39",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-CN3 (Centre-Bonnevoie-Gasperich-Cessange-Centre)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de78a711dbdb8177afb4b",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-CN4 (Centre-Eich-Weimerskirch-Kirchberg-Centre)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de7c2711dbdb8177afb5f",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-CSB (Parking Glacis -, rue Beaumont)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de0a5711dbdb8177af921",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-11 (Gare Centrale - Steinsel,M.Rodange Plaz,Gare Centrale - Walferdange - Steinsel,M.Rodange Plaz)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de55a711dbdb8177afaa4",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-31 (Howald, CIPA-Reckenthal, Oricher-Hoehl)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de49a711dbdb8177afa63",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-28 (Gare Centrale-Bertrange,École Européenne II)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de4d8711dbdb8177afa74",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-29 (Howald, P+R Lux/Sud–Aéroport, Cargo Center)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553dddeb9edb05fa3c02cb00",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-5 (Bertrange,Bartreng Gemeng-Bonnevoie,Demy Schlechter)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553ddef99edb05fa3c02cb4b",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-10 (Gare Centrale-Steinsel,M.Rodange Plaz,Gare Centrale - Walferdange - Steinsel,M.Rodange Plaz)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de12a711dbdb8177af94f",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-13 (Gare Centrale-Belair,Centre Hospitalier,Gare Centrale-Strassen,Primeurs)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de1c2711dbdb8177af978",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-15 (Merl,Celtes-Hamm,Rue de Bitbourg)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de22a711dbdb8177af991",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-17 (P+R Bouillon-Centre,Monterey,P+R Bouillon-Cloche d’Or,Guillaume Kroll)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de319711dbdb8177af9e3",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-21 (Eich,centre culturel-Cloche d’Or,Guillaume Kroll)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de34b711dbdb8177af9f5",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-22 (Gare Centrale-Belair,Centre Hospitalier,Gare Centrale-Strassen,Primeurs)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de37f711dbdb8177afa08",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-23 (Gasperich,Fr. Hogenberg-Beggen,Henri Dunant)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de3b9711dbdb8177afa18",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-24 (Hollerich, P+R Bouillon - Cloche d`Or,P+R Luxembourg/Sud)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de429711dbdb8177afa41",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-26 (Gare Centrale-Leudelange-Bertrange,Belle Étoile,Gare Centrale-Bourmicht-Bertrange,Belle Étoile)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de45c711dbdb8177afa50",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-27 (Gare Centrale-Leudelange-Bertrange,Belle Étoile,Gare Centrale-Bourmicht-Bertrange,Belle Étoile)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553ddc9e9edb05fa3c02caa8",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-1 (P+R Bouillon-Kirchberg,Luxexpo)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553ddd1b9edb05fa3c02cac9",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-2 (Limpertsberg,LT Michel Lucius-Gasperich)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553ddd6c9edb05fa3c02cae3",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-3 (Limpertsberg,LT Michel Lucius - Howald,3 - Waassertuerm 30 - Hesper cité um Schlass)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553dddc19edb05fa3c02caf7",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-4 (Limpertsberg, L.T. Michel Lucius – Cessange - Leudelange, Gemeng)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553dde9a9edb05fa3c02cb24",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-8 (Eich,centre culturel-Bertrange,Waassertuerm)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de1f7711dbdb8177af987",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-16 (Howald,cité um Schlass-Aéroport EUROBUS)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de262711dbdb8177af9a0",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-18 (Kockelscheuer,Patinoire-Kirchberg,Luxexpo)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de2b9711dbdb8177af9b4",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-19 (Gare Centrale-Hauts St.Lambert,Neumans Park)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de2ea711dbdb8177af9c7",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-20 (Hamm, rue de Bitbourg - Weimershof, Marcel Reuland)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de51f711dbdb8177afa92",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-30 (Limpertsberg,LT Michel Lucius - Howald,3 - Waassertuerm, 30 - Hesper cité um Schlass)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f2155670ea92f17aef",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Emplacements pour motos"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "56dfed4abdebaf05f3fc3bc5",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-7 (Pulvermühl Hammerdällchen - Kirchberg Rehazenter) "
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f1155670ea92f17a5c",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Point de location vel'oH!"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553dde189edb05fa3c02cb0c",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-6 (Bertrange,Bartreng Gemeng-Bonnevoie,Demy Schlechter)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de0d2711dbdb8177af92f",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-12 (P+R Bouillon-Dommeldange,Parc de l’Europe)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "553de3f6711dbdb8177afa2b",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Ligne-25 (Dommeldange,Gare-Hamm,Rue de Bitbourg)"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f2155670ea92f17bf3",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Parking en surface"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f2155670ea92f17bf2",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Parking mobilité réduite"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f2155670ea92f17bf4",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Parking couvert"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f2155670ea92f17af1",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Park + Ride"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f2155670ea92f17aee",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Emplacements pour vélos"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f2155670ea92f17af0",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Park + Bike"
+                }
+            }
+        },
+        {
+            "format": "http://geojson.org",
+            "id": "4ea917f2155670ea92f17b7c",
+            "projection": "http://proj4js.org/",
+            "spatialreference": "http://spatialreference.org/",
+            "i18n": {
+                "fr": {
+                    "name": "Fontaines"
+                }
+            }
+        }
+    ]
+}
