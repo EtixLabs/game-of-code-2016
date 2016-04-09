@@ -45,7 +45,8 @@ app.get('/bus/:id/from/:startId/to/:stopId/maths', function (req, res) {
             coords: [],
             time: new Date()
         },
-        distance: 0
+        distance: 0,
+        speed: 0
     };
     console.log('Requesting for stops/paths information for bus ' + id + '...');
     request('http://opendata.vdl.lu/odaweb/index.jsp?cat=' + id).then((data) => {
@@ -146,7 +147,7 @@ function getStopApiIdByCoord(res, stop) {
     let startX = Number((stop.geometry.coordinates[0]).toFixed(6)) * 1000000;
     let startY = Number((stop.geometry.coordinates[1]).toFixed(6)) * 1000000;
 
-    let url = 'http://travelplanner.mobiliteit.lu/hafas/query.exe/dot?performLocating=2&tpl=stop2csv&look_maxdist=1500&look_x=' + startX + '&look_y=' + startY + '&stationProxy=yes';
+    let url = 'http://travelplanner.mobiliteit.lu/hafas/query.exe/dot?performLocating=2&tpl=stop2csv&look_maxdist=150&look_x=' + startX + '&look_y=' + startY + '&stationProxy=yes';
 
     console.log('Getting Stop RealTime API Id for ' + stop.properties.name);
     return request(url).then((data) => {
@@ -175,7 +176,7 @@ function getStopsCoordsByIds(data, stopIds) {
     let stops = [];
     for (let stopId of stopIds) {
             for (let line of data) {
-                if (line.geometry.type == 'Point') {
+                if (line && line.geometry.type == 'Point') {
                     if (line.geometry.id == stopId) {
                         stops.push(line);
                     }
@@ -187,21 +188,13 @@ function getStopsCoordsByIds(data, stopIds) {
 
 function formatBusLineDataForGoogleAPI(data) {
     let id = 0;
-    let i = 0;
-    let stops = [];
     for (let line of data.features) {
         if (line.geometry.type == 'LineString') {
             line.geometry.coordinates = convertCoordFromEPSG2169ToNormal(line.geometry.coordinates);
         } else {
-            if (stops.indexOf(/(.*?)<br>.*?/.exec(line.properties.name)[0]) == -1) {
-                stops.push(/(.*?)<br>.*?/.exec(line.properties.name)[0]);
                 line.geometry.id = id++;
                 line.geometry.coordinates = proj4(luxEPSG2169).inverse(line.geometry.coordinates);
-            } else {
-                delete data.features[i];
-            }
         }
-        i++;
     }
     return data.features;
 }
