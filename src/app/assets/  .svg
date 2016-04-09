@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="152px" height="152px" viewBox="0 0 152 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>math-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-371.000000, -294.000000)">
+            <g id="Math" transform="translate(371.000000, 294.000000)">
+                <g id="math-icon">
+                    <g id="Group-3" stroke-width="9" stroke="#1D9CE8" fill="#128DD0">
+                        <g id="Group-2">
+                            <circle id="Oval-1" cx="76" cy="76" r="76"></circle>
+                        </g>
+                    </g>
+                    <g id="calculator-icon" transform="translate(50.000000, 42.000000)">
+                        <g id="Group-4">
+                            <rect id="Rectangle-8" stroke="#FFFFFF" stroke-width="5" fill="#B7E0F6" x="0" y="0" width="52" height="69" rx="4"></rect>
+                            <path d="M11.2666667,33.6375 C13.6599006,33.6375 15.6,31.706728 15.6,29.325 C15.6,26.943272 13.6599006,25.0125 11.2666667,25.0125 C8.87343275,25.0125 6.93333333,26.943272 6.93333333,29.325 C6.93333333,31.706728 8.87343275,33.6375 11.2666667,33.6375 Z" id="Oval-2" fill="#FFFFFF"></path>
+                            <rect id="Rectangle-10" fill="#FF5656" x="9.53333333" y="27.6" width="3.46666667" height="3.45"></rect>
+                            <rect id="Rectangle-9" fill="#FFFFFF" x="6.06666667" y="7.7625" width="39" height="10.35" rx="100"></rect>
+                            <ellipse id="Oval-2-Copy" fill="#FFFFFF" cx="25.1333333" cy="29.325" rx="4.33333333" ry="4.3125"></ellipse>
+                            <ellipse id="Oval-2-Copy-2" fill="#FFFFFF" cx="39.8666667" cy="29.325" rx="4.33333333" ry="4.3125"></ellipse>
+                            <path d="M11.2666667,46.575 C13.6599006,46.575 15.6,44.644228 15.6,42.2625 C15.6,39.880772 13.6599006,37.95 11.2666667,37.95 C8.87343275,37.95 6.93333333,39.880772 6.93333333,42.2625 C6.93333333,44.644228 8.87343275,46.575 11.2666667,46.575 Z" id="Oval-2-Copy-5" fill="#FFFFFF"></path>
+                            <ellipse id="Oval-2-Copy-4" fill="#FFFFFF" cx="25.1333333" cy="42.2625" rx="4.33333333" ry="4.3125"></ellipse>
+                            <ellipse id="Oval-2-Copy-3" fill="#FFFFFF" cx="39.8666667" cy="42.2625" rx="4.33333333" ry="4.3125"></ellipse>
+                            <path d="M11.2666667,59.5125 C13.6599006,59.5125 15.6,57.581728 15.6,55.2 C15.6,52.818272 13.6599006,50.8875 11.2666667,50.8875 C8.87343275,50.8875 6.93333333,52.818272 6.93333333,55.2 C6.93333333,57.581728 8.87343275,59.5125 11.2666667,59.5125 Z" id="Oval-2-Copy-8" fill="#FFFFFF"></path>
+                            <ellipse id="Oval-2-Copy-7" fill="#FFFFFF" cx="25.1333333" cy="55.2" rx="4.33333333" ry="4.3125"></ellipse>
+                            <ellipse id="Oval-2-Copy-6" fill="#FFFFFF" cx="39.8666667" cy="55.2" rx="4.33333333" ry="4.3125"></ellipse>
+                            <path d="M25.1333333,31.05 C26.0906269,31.05 26.8666667,30.2776912 26.8666667,29.325 C26.8666667,28.3723088 26.0906269,27.6 25.1333333,27.6 C24.1760398,27.6 23.4,28.3723088 23.4,29.325 C23.4,30.2776912 24.1760398,31.05 25.1333333,31.05 Z" id="Oval-11" fill="#10A2F2"></path>
+                            <polygon id="Polygon-1" fill="#D8D8D8" points="39.8666667 27.14 42.0011738 28.6833544 41.1858646 31.1805543 38.5474687 31.1805543 37.7321595 28.6833544 "></polygon>
+                            <ellipse id="Oval-11-Copy" fill="#FF5656" cx="39.8666667" cy="55.2" rx="1.73333333" ry="1.725"></ellipse>
+                            <polygon id="Polygon-1-Copy" fill="#10A2F2" points="39.8666667 40.04875 42.0911111 42.2625 39.8666667 44.47625 37.6422222 42.2625 "></polygon>
+                            <polygon id="Polygon-1-Copy-2" fill="#10A2F2" points="11.1818313 40.04875 13.1082567 41.155625 13.1082567 43.369375 11.1818313 44.47625 9.2554059 43.369375 9.2554059 41.155625 "></polygon>
+                            <polygon id="Polygon-1-Copy-2" fill="#10A2F2" points="30.019353 11.04 31.7580043 12.0389848 31.7580043 14.0369543 30.019353 15.0359391 28.2807018 14.0369543 28.2807018 12.0389848 "></polygon>
+                            <rect id="Rectangle-10-Copy" fill="#D8D8D8" x="23.4" y="40.5375" width="3.46666667" height="3.45"></rect>
+                            <polygon id="Polygon-1-Copy-4" fill="#FF5656" points="25.1333333 52.9575 27.3866667 55.2 25.1333333 57.4425 22.88 55.2 "></polygon>
+                            <rect id="Rectangle-10-Copy-2" fill="#10A2F2" x="9.53333333" y="53.475" width="3.46666667" height="3.45"></rect>
+                            <rect id="Rectangle-10" fill="#10A2F2" x="9.13985034" y="11.04" width="3.69777778" height="3.68"></rect>
+                            <ellipse id="Oval-11" fill="#FF5656" cx="20.0701754" cy="12.8557895" rx="1.8245614" ry="1.81578947"></ellipse>
+                            <text id="+" font-family="ProximaNova-Bold, Proxima Nova" font-size="5.13157895" font-weight="bold" fill="#E4E4E4">
+                                <tspan x="14.3068421" y="15.4075">+</tspan>
+                            </text>
+                            <text id="+-copy" font-family="ProximaNova-Bold, Proxima Nova" font-size="5.13157895" font-weight="bold" fill="#E4E4E4">
+                                <tspan x="23.8401754" y="15.4075">+</tspan>
+                            </text>
+                            <text id="=" font-family="ProximaNova-Bold, Proxima Nova" font-size="5.13157895" font-weight="bold" fill="#E4E4E4">
+                                <tspan x="33.3735088" y="15.4075">=</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

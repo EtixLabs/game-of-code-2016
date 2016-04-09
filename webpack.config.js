@@ -55,7 +55,7 @@ module.exports = (() => {
                 exclude: externalDependendenciesRegexp
             }, {
                 // Assets loader: import images and fonts as external resources
-                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
                 // Use an absolute path for assets, because they can be references from
                 // different places (templates, css, ...)
                 loader: 'file?name=assets/[hash].[ext]',
