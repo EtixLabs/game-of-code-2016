@@ -1,3 +1,4 @@
 <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-    <ui-gmap-marker idkey='marker.id' coords='marker.coords'></ui-gmap-marker>
+    <ui-gmap-marker ng-repeat="marker in markers" idkey='marker.id' coords='marker'></ui-gmap-marker>
+    <ui-gmap-polyline ng-repeat="path in paths" path='path'></ui-gmap-polyline>
 </ui-gmap-google-map>

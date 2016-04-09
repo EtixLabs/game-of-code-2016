@@ -4,7 +4,8 @@ import template from './app.html';
 
 class Controller {
     // @ngInject
-    constructor() {
+    constructor($http) {
+
     }
 }
 

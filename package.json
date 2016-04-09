@@ -25,6 +25,7 @@
     "gsap": "^1.18.2",
     "jquery": "^2.2.1",
     "lodash": "^4.5.1",
+    "proj4": "^2.3.14",
     "socket.io-client": "^1.4.5"
   },
   "devDependencies": {
