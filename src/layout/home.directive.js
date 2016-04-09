@@ -10,6 +10,14 @@ class Controller {
         this.paths = [];
         this.markers = [];
 
+        this.map = {
+            center: {
+                latitude: 49.61352086102421,
+                longitude: 6.129348334816693
+            },
+            zoom: 14
+        };
+
        this.changeBusLine = () => {
            this.paths = [];
            this.markers = [];
@@ -21,10 +29,23 @@ class Controller {
                    } else if (line.geometry.type == 'Point') {
                        this.markers.push(line.geometry);
                    }
+                   else {
+                       console.log(line.geometry.type);
+                   }
+
                }
+
                this.map = {
-                   center: _.cloneDeep(this.markers[0]),
-                   zoom: 14
+                   bounds: {
+                        northeast: {
+                            latitude: _(this.markers).map(p => p.coordinates[1]).max(),
+                            longitude: _(this.markers).map(p => p.coordinates[0]).max()
+                        },
+                        southwest: {
+                            latitude: _(this.markers).map(p => p.coordinates[1]).min(),
+                            longitude: _(this.markers).map(p => p.coordinates[0]).min()
+                        }
+                    }
                };
            });
        }
@@ -34,7 +55,6 @@ class Controller {
            this.currentBusLine = this.bus[0];
            this.changeBusLine();
        });
-
     }
 }
 
