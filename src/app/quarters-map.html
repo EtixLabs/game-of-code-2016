@@ -2,9 +2,11 @@
     <ui-gmap-polygon path="ctrl.polygon"></ui-gmap-polygon>
 </ui-gmap-google-map>
 
-<button ng-click="ctrl.randomQuarter()">Random quarter !</button>
+<div id="buttons-quarters">
+    <button ng-click="ctrl.randomQuarter()">Random quarter !</button>
 
-<select ng-model="ctrl.currentQuarter" ng-options="item as item.name for item in ctrl.optionsToKnow" ng-change="ctrl.itIsAwesome()">
-</select>
+    <select ng-model="ctrl.currentQuarter" ng-options="item as item.name for item in ctrl.optionsToKnow" ng-change="ctrl.itIsAwesome()">
+    </select>
 
-<span>{{ ctrl.response }}</span>
+    <span>{{ ctrl.response }}</span>
+</div>

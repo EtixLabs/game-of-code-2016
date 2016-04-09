@@ -16,6 +16,8 @@ import buses from './buses.component';
 
 import './app.scss';
 import './maths.scss';
+import './quarters.scss';
+
 
 const MODULE_NAME = 'etix.kru';
 
