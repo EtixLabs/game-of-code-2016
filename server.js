@@ -74,7 +74,9 @@ app.get('/bus/:id/from/:startId/to/:stopId/maths', function (req, res) {
                 resume.start.time = new Date(getNextScheduleByBusNumber(stopSchedules[0], busNumber));
                 resume.stop.time = new Date(getNextScheduleByBusNumber(stopSchedules[1], busNumber));
                 resume.distance = getDistanceBetweenTwoCoords(resume.start.coords, resume.stop.coords);
-                resume.speed = resume.stop.time - resume.start.time;
+                let timeDiff = Math.abs(resume.stop.time.getTime() - resume.start.time.getTime());
+                timeDiff = timeDiff / 60 / 1000;
+                resume.speed = (resume.distance * (60 / timeDiff)) / 1000;
                 res.send(resume);
             });;
         });
