@@ -15,6 +15,7 @@ import quartersMap from './quarters-map.component';
 import buses from './buses.component';
 
 import './app.scss';
+import './maths.scss';
 
 const MODULE_NAME = 'etix.kru';
 
