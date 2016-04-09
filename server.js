@@ -34,24 +34,42 @@ app.get('/bus', function (req, res) {
 app.get('/bus/:id', function (req, res) {
     let id = req.params.id;
     request('http://opendata.vdl.lu/odaweb/index.jsp?cat=' + id).then((data) => {
-        res.send(formatBusLineData(JSON.parse(data)));
+        res.send(formatBusLineDataForGoogleAPI(JSON.parse(data)));
     });
 });
 
-app.get('/bus/:id/maths/exercises', function (req, res) {
+app.get('/bus/:id/maths', function (req, res) {
     let id = req.params.id;
     request('http://opendata.vdl.lu/odaweb/index.jsp?cat=' + id).then((data) => {
-        data = formatBusLineData(JSON.parse(data));
+        data = formatBusLineDataForExerciseGeneration(JSON.parse(data));
+        res.send(data);
     });
 });
 
-function formatBusLineData(data) {
+function formatBusLineDataForExerciseGeneration(data) {
     let ret = {paths: [], stops: []};
+    let id = 0;
+    for (let line of data.features) {
+        if (line.geometry.type == 'LineString') {
+            ret.paths.push(convertCoordFromEPSG2169ToNormal(line.geometry.coordinates));
+        } else {
+            let point = {
+                id: id++,
+                coord: proj4(luxEPSG2169).inverse(line.geometry.coordinates),
+            }
+            ret.stops.push(point);
+        }
+    }
+    return ret;
+}
+
+function formatBusLineDataForGoogleAPI(data) {
     let id = 0;
     for (let line of data.features) {
         if (line.geometry.type == 'LineString') {
             line.geometry.coordinates = convertCoordFromEPSG2169ToNormal(line.geometry.coordinates);
         } else {
+            line.geometry.id = id++;
             line.geometry.coordinates = proj4(luxEPSG2169).inverse(line.geometry.coordinates);
         }
     }
