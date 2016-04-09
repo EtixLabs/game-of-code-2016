@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rimraf dist/* && webpack --progress",
     "serve": "webpack-dev-server",
+    "api": "node server.js",
     "test": "karma start"
   },
   "author": "Etix Labs",
@@ -22,10 +23,13 @@
     "angular-ui-bootstrap": "^1.2.1",
     "angular-ui-router": "^0.2.18",
     "babel-polyfill": "^6.5.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
     "gsap": "^1.18.2",
     "jquery": "^2.2.1",
     "lodash": "^4.5.1",
     "proj4": "^2.3.14",
+    "request-promise": "^2.0.1",
     "socket.io-client": "^1.4.5"
   },
   "devDependencies": {
