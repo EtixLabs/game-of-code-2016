@@ -1,3 +1,6 @@
+<select ng-model="ctrl.currentBusLine" ng-options="item as item.name for item in ctrl.bus"  ng-change="ctrl.changeBusLine()">
+</select>
+
 <div>
     <select ng-model='ctrl.start' ng-options="item as item.name for item in ctrl.stops" ng-change="ctrl.changeStart()" >
     </select>
@@ -12,8 +15,6 @@
     <ui-gmap-polyline ng-repeat="path in ctrl.paths" path='path' stroke="path.stroke" ></ui-gmap-polyline>
 </ui-gmap-google-map>
 
-<select ng-model="ctrl.currentBusLine" ng-options="item as item.name for item in ctrl.bus"  ng-change="ctrl.changeBusLine()">
-</select>
 <button ng-click="ctrl.selectStops()">Select Stops</button>
 <div ng-show="ctrl.loading">
     <i class="fa-li fa fa-spinner fa-spin"></i>
@@ -21,7 +22,12 @@
 <div ng-if="ctrl.commuteData">
     <dl>
         <dt>Commute distance:</dt>
-        <dd>{{ctrl.commuteData.distance / 1000}} km</dd>
+        <dd>{{ctrl.commuteData.distance}} km</dd>
         <dt>Average speed:</dt>
         <dd>{{ctrl.commuteData.speed }} km/h</dd>
+        <dt>CO2 Emission:</dt>
+        <dd>2.6 kg/l</dd>
+        <dt>Average gaz usage:</dt>
+        <dd>20l/100km</dd>
+    </dl>
 </div>

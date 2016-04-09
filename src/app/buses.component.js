@@ -88,6 +88,8 @@ class Controller {
         this.$http.get('http://localhost:3000/bus/' + this.currentBusLine.id + '/from/' + this.start.id + '/to/' + this.stop.id + '/maths').then(res => {
             this.loading = false;
             this.commuteData = res.data;
+            this.commuteData.distance = Math.round(this.commuteData.distance / 100) / 10;
+            this.commuteData.speed = Math.round(this.commuteData.speed * 10) / 10;
         })
     }
 }
