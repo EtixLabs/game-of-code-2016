@@ -1,7 +1,7 @@
 'use strict';
 
 import _ from 'lodash';
-import template from './home.html';
+import template from './buses.html';
 import proj4 from 'proj4';
 
 class Controller {

@@ -7,19 +7,19 @@ import uiRouter from 'angular-ui-router';
 import 'angular-simple-logger';
 import 'angular-google-maps';
 
-import '../layout/home.css'
-import homeLayout from '../layout/layout.module';
-
 // App components
 import appComponent from './app.component';
-import routesConfig from './routes-config.js';
+import routesConfig from './routes-config';
+import quartersMap from './quarters-map.component';
+import buses from './buses.component';
+
+import './app.scss';
 
 const MODULE_NAME = 'etix.kru';
 
 angular
     .module(MODULE_NAME, [
         'uiGmapgoogle-maps',
-        homeLayout,
         uiRouter
     ])
     .component('etixKru', appComponent)
@@ -29,6 +29,8 @@ angular
             key: 'AIzaSyCmswTUxF2EsZ_oqoNljJDz2HrHo5tAzFc',
         });
     })
+    .component('quartersMap', quartersMap)
+    .component('buses', buses)
 ;
 
 export default MODULE_NAME;
