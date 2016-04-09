@@ -15,3 +15,13 @@
 <select ng-model="ctrl.currentBusLine" ng-options="item as item.name for item in ctrl.bus"  ng-change="ctrl.changeBusLine()">
 </select>
 <button ng-click="ctrl.selectStops()">Select Stops</button>
+<div ng-show="ctrl.loading">
+    <i class="fa-li fa fa-spinner fa-spin"></i>
+</div>
+<div ng-if="ctrl.commuteData">
+    <dl>
+        <dt>Commute distance:</dt>
+        <dd>{{ctrl.commuteData.distance / 1000}} km</dd>
+        <dt>Average speed:</dt>
+        <dd>{{ctrl.commuteData.speed }} km/h</dd>
+</div>

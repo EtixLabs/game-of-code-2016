@@ -84,8 +84,10 @@ class Controller {
     }
 
     selectStops() {
+        this.loading = true;
         this.$http.get('http://localhost:3000/bus/' + this.currentBusLine.id + '/from/' + this.start.id + '/to/' + this.stop.id + '/maths').then(res => {
-            console.log(res);
+            this.loading = false;
+            this.commuteData = res.data;
         })
     }
 }

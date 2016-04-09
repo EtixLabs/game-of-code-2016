@@ -7,6 +7,7 @@ import uiRouter from 'angular-ui-router';
 import 'angular-simple-logger';
 import 'angular-google-maps';
 import uiBootsrap from 'angular-ui-bootstrap';
+import 'font-awesome/css/font-awesome.css';
 
 // App components
 import appComponent from './app.component';
