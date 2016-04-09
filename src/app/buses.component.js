@@ -1,8 +1,9 @@
 'use strict';
 
 import _ from 'lodash';
-import template from './buses.html';
 import proj4 from 'proj4';
+
+import template from './buses.html';
 
 class Controller {
     // @ngInject

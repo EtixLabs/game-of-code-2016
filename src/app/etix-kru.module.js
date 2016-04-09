@@ -6,6 +6,7 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import 'angular-simple-logger';
 import 'angular-google-maps';
+import uiBootsrap from 'angular-ui-bootstrap';
 
 // App components
 import appComponent from './app.component';
@@ -14,13 +15,15 @@ import quartersMap from './quarters-map.component';
 import buses from './buses.component';
 
 import './app.scss';
+import './maths.scss';
 
 const MODULE_NAME = 'etix.kru';
 
 angular
     .module(MODULE_NAME, [
         'uiGmapgoogle-maps',
-        uiRouter
+        uiRouter,
+        uiBootsrap
     ])
     .component('etixKru', appComponent)
     .config(routesConfig)

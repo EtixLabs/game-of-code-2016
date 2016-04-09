@@ -1,11 +1,12 @@
 'use strict';
 
 import template from './app.html';
+import backgroundImg from './assets/city-scape.png';
 
 class Controller {
     // @ngInject
-    constructor($http) {
-
+    constructor() {
+        this.backgroundImg = backgroundImg;
     }
 }
 
