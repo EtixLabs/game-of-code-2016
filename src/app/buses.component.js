@@ -10,6 +10,8 @@ import stopMarker from './assets/end-icon.png';
 class Controller {
     // @ngInject
     constructor($http, uiGmapGoogleMapApi) {
+        this.$http = $http;
+
         this.paths = [];
         this.stops = [];
 
@@ -79,6 +81,12 @@ class Controller {
            this.currentBusLine = this.bus[0];
            this.changeBusLine();
        });
+    }
+
+    selectStops() {
+        this.$http.get('http://localhost:3000/bus/' + this.currentBusLine.id + '/from/' + this.start.id + '/to/' + this.stop.id + '/maths').then(res => {
+            console.log(res);
+        })
     }
 }
 
