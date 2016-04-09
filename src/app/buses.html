@@ -1,4 +1,4 @@
-<ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom' bounds='ctrl.map.bounds'>
+<ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom' bounds='ctrl.map.bounds' options="ctrl.map.options">
     <ui-gmap-marker ng-repeat="marker in ctrl.markers" idkey='marker.id' coords='marker'></ui-gmap-marker>
     <ui-gmap-polyline ng-repeat="path in ctrl.paths" path='path'></ui-gmap-polyline>
 </ui-gmap-google-map>
