@@ -15,6 +15,7 @@ class Controller {
         });
 
         this.polygon = [];
+        this.optionsToKnow = [];
 
         this.map = {
             center: {
@@ -50,11 +51,35 @@ class Controller {
         };
     }
 
+    itIsAwesome() {
+        if (this.currentQuarter.name === this.goodOption.name) {
+            this.response = "Win !";
+        } else {
+            this.response = "Try again..";
+        }
+    }
+
     randomQuarter() {
         let prevQuarter = this.polygon;
+        this.optionsToKnow = [];
         while (this.polygon === prevQuarter) {
-            this.polygon = this.quarters[(Math.random() * this.quarters.length) | 0].shape;
+            let index = (Math.random() * this.quarters.length) | 0;
+            this.optionsToKnow = [ this.quarters[index] ];
+            this.goodOption = this.quarters[index];
+            this.polygon = this.quarters[index].shape;
         }
+
+        let prev = null;
+        let curr = null;
+        for (let i = 0; i < 5; i++) {
+            while (curr === prev) {
+                curr = this.quarters[(Math.random() * this.quarters.length) | 0];
+            }
+            this.optionsToKnow.push(curr);
+            prev = curr;
+            this.optionsToKnow = _.shuffle(this.optionsToKnow);
+        }
+
         this.map.bounds = {
             northeast: {
                 latitude: _(this.polygon).map(p => p.latitude).max(),

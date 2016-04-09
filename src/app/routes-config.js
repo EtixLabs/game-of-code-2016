@@ -4,6 +4,7 @@ export default routesConfig;
 
 import categoriesView from './categories.html';
 import mathsView from './maths.html';
+import geographyView from './geography.html';
 
 // @ngInject
 function routesConfig($locationProvider, $urlRouterProvider, $stateProvider) {
@@ -19,4 +20,10 @@ function routesConfig($locationProvider, $urlRouterProvider, $stateProvider) {
         url: '/maths',
         templateUrl: mathsView
     });
+
+    $stateProvider.state('geography', {
+        url: '/geography',
+        templateUrl: geographyView
+    });
+
 }
