@@ -34,20 +34,35 @@ app.get('/bus', function (req, res) {
 app.get('/bus/:id', function (req, res) {
     let id = req.params.id;
     request('http://opendata.vdl.lu/odaweb/index.jsp?cat=' + id).then((data) => {
+        console.log(data);
         data = JSON.parse(data);
-        let ret = {paths: [], stops: []};
-        for (let line of data.features) {
-            if (line.geometry.type == 'LineString') {
-                ret['paths'].push(tranformCoords(line.geometry.coordinates));
-            } else {
-                ret['stops'].push(proj4(luxEPSG2169).inverse(line.geometry.coordinates));
-            }
-        }
-        res.send(ret);
+        res.send(formatBusLineData(data));
     });
 });
 
-function tranformCoords(coordinates) {
+app.get('/bus/:id/maths/excercise', function (req, res) {
+    let id = req.params.id;
+});
+
+function formatBusLineData(data) {
+    let ret = {paths: [], stops: []};
+    let id = 0;
+    for (let line of data.features) {
+        if (line.geometry.type == 'LineString') {
+            ret.paths.push(convertCoordFromEPSG2169ToNormal(line.geometry.coordinates));
+        } else {
+            let point = {
+                id: id++,
+                coord: proj4(luxEPSG2169).inverse(line.geometry.coordinates),
+                name: line.properties.name
+            }
+            ret.stops.push(point);
+        }
+    }
+    return ret;
+}
+
+function convertCoordFromEPSG2169ToNormal(coordinates) {
     let path = [];
     for (let coord of coordinates) {
         path.push(proj4(luxEPSG2169).inverse(coord));
