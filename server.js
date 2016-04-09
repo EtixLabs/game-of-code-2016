@@ -115,13 +115,21 @@ function getStopsCoordsByIds(data, stopIds) {
 
 function formatBusLineDataForGoogleAPI(data) {
     let id = 0;
+    let i = 0;
+    let stops = [];
     for (let line of data.features) {
         if (line.geometry.type == 'LineString') {
             line.geometry.coordinates = convertCoordFromEPSG2169ToNormal(line.geometry.coordinates);
         } else {
-            line.geometry.id = id++;
-            line.geometry.coordinates = proj4(luxEPSG2169).inverse(line.geometry.coordinates);
+            if (stops.indexOf(/(.*?)<br>.*?/.exec(line.properties.name)[0]) == -1) {
+                stops.push(/(.*?)<br>.*?/.exec(line.properties.name)[0]);
+                line.geometry.id = id++;
+                line.geometry.coordinates = proj4(luxEPSG2169).inverse(line.geometry.coordinates);
+            } else {
+                delete data.features[i];
+            }
         }
+        i++;
     }
     return data.features;
 }
