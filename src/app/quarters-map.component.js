@@ -62,6 +62,7 @@ class Controller {
     randomQuarter() {
         let prevQuarter = this.polygon;
         this.optionsToKnow = [];
+        this.response = '';
         while (this.polygon === prevQuarter) {
             let index = (Math.random() * this.quarters.length) | 0;
             this.optionsToKnow = [ this.quarters[index] ];
