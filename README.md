@@ -16,6 +16,10 @@ Then if you scroll down, you can click on the "Select Stops" button. After some 
 
 The Geography exercise is quite easy to use. Just click the "Random quarter !" button, and a Luxembourg District will be highlight on the map. Then select the name of the district using the multiple-choice selector next to the button. A message will then tell you if you picked the good or a wrong answer.
 
+## Bugs
+
+Please note that this app was built in a very short amount of time, so certain features may not work as expected. We will improve it in the next coming days but if you still find some bugs, please feel free to create a GitHub issue.
+
 # Run the project
 
 To run the project on your computer, first install its dependencies using npm:
