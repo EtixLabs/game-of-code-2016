@@ -7,6 +7,8 @@ let proj4 = require('proj4');
 
 let app = express();
 
+let port = process.env.PORT || 3000;
+
 let luxEPSG2169 = '+proj=tmerc +lat_0=49.83333333333334 +lon_0=6.166666666666667 +k=1 +x_0=80000 +y_0=100000 +ellps=intl +towgs84=-193,13.7,-39.3,-0.41,-2.933,2.688,0.43 +units=m +no_defs ';
 
 app.use(cors());
@@ -210,6 +212,6 @@ function convertCoordFromEPSG2169ToNormal(coordinates) {
     return path;
 }
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+    console.log(`Educity app listening on port ${port} !`);
 });
