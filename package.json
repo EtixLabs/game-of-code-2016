@@ -5,9 +5,7 @@
   "main": "src/etix-kru.module.js",
   "scripts": {
     "build": "rimraf dist/* && webpack --progress",
-    "webapp": "webpack-dev-server",
-    "api": "node server.js",
-    "test": "karma start"
+    "start": "node server.js"
   },
   "author": "Etix Labs",
   "license": "GPL-3.0",

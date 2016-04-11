@@ -137,21 +137,5 @@ module.exports = (() => {
         });
     }
 
-    if (enableNgAnnotate || ENV === 'build') {
-        config.plugins.push(
-            // Use ngAnnotate to automatically generate angular explict DI ($inject)
-            new NgAnnotatePlugin()
-        );
-    }
-
-    // Add build optimisation plugins
-    if (ENV === 'build') {
-        config.plugins.push(
-            // Optimisation plugins
-            new webpack.optimize.DedupePlugin(),
-            new webpack.optimize.UglifyJsPlugin()
-        );
-    }
-
     return config;
 })();

@@ -11,9 +11,7 @@ let luxEPSG2169 = '+proj=tmerc +lat_0=49.83333333333334 +lon_0=6.166666666666667
 
 app.use(cors());
 
-app.get('/', function (req, res) {
-    res.send(JSON.stringify('Welcome to Educity API'));
-});
+app.use(express.static('dist'));
 
 app.get('/bus', function (req, res) {
     getBusList().then(function (ret) {

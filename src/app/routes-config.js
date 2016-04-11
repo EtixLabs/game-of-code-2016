@@ -8,7 +8,6 @@ import geographyView from './geography.html';
 
 // @ngInject
 function routesConfig($locationProvider, $urlRouterProvider, $stateProvider) {
-    $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/categories');
 
     $stateProvider.state('categories', {

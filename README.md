@@ -11,16 +11,16 @@ cd game-of-code-2016
 npm install
 ```
 
-Then you can run the API using:
+Then build the webapp using
 
 ```
-npm run api
+npm run build
 ```
 
-And the web application using:
+Finally, launch the web application (on port 3000) using:
 
 ```
-npm run webapp
+npm start
 ```
 
 # License
