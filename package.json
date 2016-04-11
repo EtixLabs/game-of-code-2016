@@ -5,11 +5,12 @@
   "main": "src/etix-kru.module.js",
   "scripts": {
     "build": "rimraf dist/* && webpack --progress",
-    "serve": "webpack-dev-server",
+    "webapp": "webpack-dev-server",
     "api": "node server.js",
     "test": "karma start"
   },
   "author": "Etix Labs",
+  "license": "GPL-3.0",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-animate": "^1.5.0",
