@@ -12,6 +12,8 @@ class Controller {
     constructor($http, uiGmapGoogleMapApi) {
         this.$http = $http;
 
+        let api = 'http://etix-kru.azurewebsites.net';
+
         this.paths = [];
         this.stops = [];
 
@@ -31,7 +33,7 @@ class Controller {
            this.paths = [];
            this.stops = [];
 
-          $http.get('http://localhost:3000/bus/' + this.currentBusLine.id).then((data) => {
+          $http.get(api + '/bus/' + this.currentBusLine.id).then((data) => {
                if (data && data.data)
                    for (let line of data.data) {
                        if (line && line.geometry && line.geometry.type)
@@ -76,7 +78,7 @@ class Controller {
             }
         }
 
-       $http.get('http://localhost:3000/bus').then((data) => {
+       $http.get(api + '/bus').then((data) => {
            this.bus = data.data;
            this.currentBusLine = this.bus[0];
            this.changeBusLine();
@@ -85,7 +87,7 @@ class Controller {
 
     selectStops() {
         this.loading = true;
-        this.$http.get('http://localhost:3000/bus/' + this.currentBusLine.id + '/from/' + this.start.id + '/to/' + this.stop.id + '/maths').then(res => {
+        this.$http.get(api + '/bus/' + this.currentBusLine.id + '/from/' + this.start.id + '/to/' + this.stop.id + '/maths').then(res => {
             this.loading = false;
             this.commuteData = res.data;
             this.commuteData.distance = Math.round(this.commuteData.distance / 100) / 10;
