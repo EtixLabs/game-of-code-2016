@@ -1,2 +1,7 @@
-# game-of-code-2016
-Etix Kru project for Game of Code Hackathon
+# Educity
+
+Educity is Etix Kru's project for Game of Code Hackathon 2016.
+
+# License
+
+GNU GPL v3
