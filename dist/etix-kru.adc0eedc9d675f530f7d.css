@@ -7987,7 +7987,8 @@ i.geo-icon {
   background-image: url(assets/b139e97475c7b510086cef6552d4f808.png); }
 
 .angular-google-map-container {
-  height: 500px; }
+  height: 350px;
+  margin-top: 30px; }
 
 .side-bar {
   position: absolute;
@@ -8049,7 +8050,6 @@ i.geo-icon {
   height: 100%;
   background-color: #F2F5F9; }
   .main-content .card {
-    overflow: auto;
     background-color: #fff;
     border-radius: 8px;
     position: absolute;
@@ -8064,29 +8064,232 @@ i.geo-icon {
     font-size: 14px;
     color: #B5B5B5;
     float: right;
-    margin: 50px;
-    font-family: Proxima; }
-  .main-content h2 {
-    text-align: center;
-    width: 100%;
-    margin-top: 55px;
-    border-bottom: 1px solid #F3F3F3;
-    padding-bottom: 20px; }
-  .main-content .step {
     font-family: Proxima;
-    color: #10A2F2;
-    font-size: 23px;
-    margin: 30px 50px;
-    float: left; }
+    margin-top: 50px;
+    margin-right: 50px; }
+  .main-content h2 {
+    border-bottom: 1px solid #F3F3F3;
+    padding-bottom: 20px;
+    text-align: left; }
+.maths-exercise h2 {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px; }
+
+.maths-exercise .step-container {
+  position: relative; }
+
+.maths-exercise .step {
+  font-family: Proxima;
+  color: #10A2F2;
+  font-size: 23px;
+  margin: 30px 50px;
+  position: absolute; }
+
 .maths-exercise .statement {
   font-size: 24px;
   text-align: center;
-  padding-top: 50px; }
+  padding-top: 25px; }
 
 .maths-exercise .statement-desc {
   font-size: 18px;
   color: #BFBFBF;
   text-align: center;
   font-family: Proxima; }
-#buttons-quarters {
+
+.maths-exercise .lines-container {
+  max-width: 880px;
+  margin: 30px auto;
+  list-style-type: none; }
+  .maths-exercise .lines-container > li {
+    display: block;
+    float: left;
+    color: #fff;
+    background-color: #CFCFCF;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 4px 15px 2px 15px;
+    margin: 8px 10px;
+    width: 70px;
+    text-align: center; }
+    .maths-exercise .lines-container > li > a {
+      display: block; }
+      .maths-exercise .lines-container > li > a:hover {
+        color: #fff; }
+    .maths-exercise .lines-container > li.active {
+      background-color: #ED3D3D; }
+
+.maths-exercise .card-footer {
+  border-top: 1px solid #F3F3F3;
+  margin: 20px 0px;
   text-align: center; }
+
+.maths-exercise .next-btn {
+  font-size: 20px;
+  padding: 15px 50px; }
+  .maths-exercise .next-btn:hover, .maths-exercise .next-btn:active, .maths-exercise .next-btn:focus {
+    color: #fff;
+    outline: none; }
+
+.maths-exercise.step2 .step-container {
+  margin-top: 20px; }
+
+.maths-exercise.step2 .stops-selector {
+  max-width: 650px;
+  margin: auto; }
+  .maths-exercise.step2 .stops-selector .range-distance {
+    display: inline-block;
+    padding: 6px 18px;
+    border: 4px solid #EFEFEF;
+    border-radius: 4px;
+    font-size: 24px;
+    text-align: center; }
+
+.maths-exercise.step2 buses {
+  display: block;
+  margin: 45px 45px 30px 45px; }
+
+.maths-exercise.step2 .bus-infos {
+  max-width: 930px;
+  margin: auto; }
+  .maths-exercise.step2 .bus-infos span {
+    display: block;
+    float: left; }
+  .maths-exercise.step2 .bus-infos .label {
+    color: #BFBFBF;
+    font-size: 18px;
+    font-family: Proxima;
+    margin-left: 20px;
+    height: 50px; }
+  .maths-exercise.step2 .bus-infos .value {
+    font-size: 20px; }
+  .maths-exercise.step2 .bus-infos .line-number {
+    margin-top: -5px;
+    color: #fff;
+    background-color: #ED3D3D;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 4px 15px 2px 15px; }
+
+.maths-exercise.step2 .card-footer .badge {
+  margin-top: 20px; }
+
+.maths-exercise.step3 .left-section {
+  width: 70%;
+  height: 500px;
+  float: left; }
+
+.maths-exercise.step3 .step-container {
+  margin-top: 20px; }
+
+.maths-exercise.step3 .statement {
+  padding-top: 90px;
+  font-size: 24px;
+  padding-left: 50px;
+  padding-right: 110px;
+  text-align: left; }
+
+.maths-exercise.step3 .answer-label {
+  color: #BFBFBF;
+  font-family: Proxima;
+  font-size: 23px;
+  padding-left: 50px;
+  margin-top: 40px; }
+
+.maths-exercise.step3 .answer-input {
+  display: block;
+  margin-left: 50px;
+  margin-top: 10px;
+  width: 70%;
+  border: none;
+  border-bottom: 3px solid #EFEFEF;
+  font-size: 23px; }
+  .maths-exercise.step3 .answer-input:focus, .maths-exercise.step3 .answer-input:active {
+    outline: none; }
+
+.maths-exercise.step3 .right-section {
+  border-left: 1px solid #F3F3F3;
+  width: 30%;
+  float: left;
+  padding: 10px 30px; }
+  .maths-exercise.step3 .right-section buses {
+    display: block;
+    margin: 35px 0px 30px 0px; }
+    .maths-exercise.step3 .right-section buses .angular-google-map-container {
+      height: 185px; }
+  .maths-exercise.step3 .right-section .bus-infos {
+    margin-bottom: 30px; }
+    .maths-exercise.step3 .right-section .bus-infos span {
+      display: block;
+      float: left; }
+    .maths-exercise.step3 .right-section .bus-infos .label {
+      color: #BFBFBF;
+      font-size: 18px;
+      font-family: Proxima;
+      height: 50px; }
+    .maths-exercise.step3 .right-section .bus-infos .value {
+      font-size: 20px;
+      float: right; }
+    .maths-exercise.step3 .right-section .bus-infos .line-number {
+      float: right;
+      margin-top: -5px;
+      color: #fff;
+      background-color: #ED3D3D;
+      border-radius: 50px;
+      font-size: 20px;
+      padding: 4px 15px 2px 15px; }
+
+.maths-exercise.step3 .card-footer {
+  margin-top: 0px; }
+  .maths-exercise.step3 .card-footer .badge {
+    margin-top: 30px; }
+.geography {
+  padding: 30px 40px; }
+  .geography .badge {
+    margin: 0; }
+  .geography .exercise-time {
+    margin: 0;
+    margin-top: 12px; }
+  .geography h2 {
+    text-align: left; }
+
+.container-fluid {
+  padding-left: 0px !important;
+  border-bottom: 1px solid #F3F3F3;
+  padding-bottom: 50px; }
+
+.quarters-info {
+  padding-left: 0px !important; }
+  .quarters-info div {
+    font-size: 20px;
+    margin: 40px 0; }
+  .quarters-info .correct-quarters-answer {
+    color: #7ED321; }
+  .quarters-info .dropdown-quarters-selection {
+    width: 90%; }
+    .quarters-info .dropdown-quarters-selection button {
+      width: 100%;
+      background-color: white;
+      border-bottom: 3px solid #F3F3F3;
+      text-align: left; }
+      .quarters-info .dropdown-quarters-selection button span.title-current-quarter {
+        display: inline-block;
+        width: 95%; }
+    .quarters-info .dropdown-quarters-selection ul {
+      width: 100%; }
+    .quarters-info .dropdown-quarters-selection li {
+      padding: 3px 15px; }
+    .quarters-info .dropdown-quarters-selection li:hover {
+      background-color: grey;
+      color: white;
+      cursor: pointer; }
+    .quarters-info .dropdown-quarters-selection .caret {
+      color: #2D93D2;
+      border-width: 8px; }
+
+.new-quarter {
+  text-align: center;
+  padding-top: 20px; }
+  .new-quarter a {
+    margin-top: 10px;
+    width: 140px; }
