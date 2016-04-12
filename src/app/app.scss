@@ -110,7 +110,8 @@ i.geo-icon {
 }
 
 .angular-google-map-container {
-    height: 500px;
+    height: 350px;
+    margin-top: 30px;
 }
 
 .side-bar {
@@ -200,27 +201,22 @@ i.geo-icon {
         left: 30px;
         right: 30px;
         bottom: 20px;
-    }
-
-    .badge {
-        margin-left: 50px;
-        margin-top: 40px;
+        padding: 30px 40px;
     }
 
     .exercise-time {
         font-size: 14px;
         color: #B5B5B5;
         float: right;
-        margin: 50px;
         font-family: Proxima;
+        margin-top: 12px;
     }
 
     h2 {
-        text-align: center;
-        width: 100%;
-        margin-top: 55px;
+        width: 87%;
         border-bottom: 1px solid #F3F3F3;
         padding-bottom: 20px;
+        text-align: left;
     }
 
     .step {

@@ -28,7 +28,7 @@ class Controller {
         };
 
        this.changeBusLine = () => {
-           this.paths = [];
+          this.paths = [];
            this.stops = [];
 
           $http.get('http://localhost:3000/bus/' + this.currentBusLine.id).then((data) => {
