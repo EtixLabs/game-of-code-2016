@@ -67,14 +67,12 @@ class Controller {
             this.polygon = this.quarters[index].shape;
         }
 
-        let prev = null;
         let curr = null;
         for (let i = 0; i < 5; i++) {
-            while (curr === prev) {
+            while (this.optionsToKnow.indexOf(curr) !== -1) {
                 curr = this.quarters[(Math.random() * this.quarters.length) | 0];
             }
             this.optionsToKnow.push(curr);
-            prev = curr;
             this.optionsToKnow = _.shuffle(this.optionsToKnow);
         }
 
