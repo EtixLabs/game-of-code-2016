@@ -10,13 +10,8 @@ class Controller {
     // @ngInject
     constructor(uiGmapGoogleMapApi, $http) {
         let quarters = [];
-        $http.get(quartersFile).then(res => {
-            this.quarters = res.data;
-        });
-
         this.polygon = [];
         this.optionsToKnow = [];
-
         this.map = {
             center: {
                 latitude: 49.610858,
@@ -49,20 +44,22 @@ class Controller {
                 ]
             }
         };
+        uiGmapGoogleMapApi.then(() => {
+            $http.get(quartersFile).then(res => {
+                this.quarters = res.data;
+                this.randomQuarter();
+            });
+        });
     }
 
+    // Just kidding, it check if the user has set the good answer.
     itIsAwesome() {
-        if (this.currentQuarter.name === this.goodOption.name) {
-            this.response = "Win !";
-        } else {
-            this.response = "Try again..";
-        }
+        this.response = (this.currentQuarter.name === this.goodOption.name);
     }
 
     randomQuarter() {
         let prevQuarter = this.polygon;
         this.optionsToKnow = [];
-        this.response = '';
         while (this.polygon === prevQuarter) {
             let index = (Math.random() * this.quarters.length) | 0;
             this.optionsToKnow = [ this.quarters[index] ];
@@ -70,14 +67,12 @@ class Controller {
             this.polygon = this.quarters[index].shape;
         }
 
-        let prev = null;
         let curr = null;
         for (let i = 0; i < 5; i++) {
-            while (curr === prev) {
+            while (this.optionsToKnow.indexOf(curr) !== -1) {
                 curr = this.quarters[(Math.random() * this.quarters.length) | 0];
             }
             this.optionsToKnow.push(curr);
-            prev = curr;
             this.optionsToKnow = _.shuffle(this.optionsToKnow);
         }
 
@@ -91,6 +86,9 @@ class Controller {
                 longitude: _(this.polygon).map(p => p.longitude).min()
             }
         };
+
+        this.currentQuarter = null;
+        this.response = null;
     }
 }
 

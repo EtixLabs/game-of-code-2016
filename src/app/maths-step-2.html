@@ -1,0 +1,49 @@
+<div class="side-bar">
+    <div class="logo-container">
+        <a ui-sref="categories">
+            <div class="logo"></div>
+        </a>
+    </div>
+    <div class="category">
+        <i class="icon math-icon"></i>
+        <h2>Math</h2>
+    </div>
+    <ul class="exercises">
+        <li class="active"><a>Exercise 1</a></li>
+        <li><a>Exercise 2</a></li>
+        <li><a>Exercise 3</a></li>
+    </ul>
+</div>
+<div class="main-content maths-exercise step2">
+    <div class="card">
+        <div class="step-container">
+            <h3 class="step">STEP 2</h3>
+            <div class="stops-selector">
+                <div class="range-distance">
+                    0km
+                </div>
+            </div>
+        </div>
+        <buses></buses>
+        <div class="bus-infos clearfix">
+            <span class="label">Line:</span>
+            <span class="line-number">{{ $ctrl.lineId }}</span>
+            <span class="label">Bus type:</span>
+            <span class="value">Mercedes</span>
+            <span class="label">Bus capacity:</span>
+            <span class="value">124</span>
+            <span class="label">Fuel type:</span>
+            <span class="value">Diesel</span>
+            <span class="label">Fuel cons:</span>
+            <span class="value">20L/100km</span>
+        </div>
+        <div class="card-footer">
+            <button class="btn badge next-btn" ui-sref="maths">
+                Back
+            </button>
+            <button class="btn badge next-btn" ui-sref="mathsStep3({lineId: $ctrl.lineId, start:1, stop: 42})">
+                Next
+            </button>
+        </div>
+    </div>
+</div>

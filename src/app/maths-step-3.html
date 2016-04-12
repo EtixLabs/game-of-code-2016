@@ -1,0 +1,66 @@
+<div class="side-bar">
+    <div class="logo-container">
+        <a ui-sref="categories">
+            <div class="logo"></div>
+        </a>
+    </div>
+    <div class="category">
+        <i class="icon math-icon"></i>
+        <h2>Math</h2>
+    </div>
+    <ul class="exercises">
+        <li class="active"><a>Exercise 1</a></li>
+        <li><a>Exercise 2</a></li>
+        <li><a>Exercise 3</a></li>
+    </ul>
+</div>
+<div class="main-content maths-exercise step3">
+    <div class="card">
+        <div class="clearfix">
+            <div class="left-section">
+                <div class="step-container">
+                    <h3 class="step">STEP 3</h3>
+                    <p class="statement">
+                        Based on your route distance of <span style="color:#10A2F2">1.5km</span> from _____  to _____ calculate the amount of CO2 emisions <span style="color:#F3554D">BUS 734</span> is releasing in the air while you ride it.<br>
+                        <span style="font-family: Proxima">This bus model eliminates in the air an average of 12mg of CO2/Liter of fuel consumed.</span>
+                    </p>
+                    <label class="answer-label">Enter your result:</label>
+                    <input type="text" class="answer-input">
+                </div>
+            </div>
+            <div class="right-section">
+                <buses></buses>
+                <div class="bus-infos clearfix">
+                    <div class="clearfix">
+                        <span class="label">Line:</span>
+                        <span class="line-number">{{ $ctrl.lineId }}</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="label">Bus type:</span>
+                        <span class="value">Mercedes</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="label">Bus capacity:</span>
+                        <span class="value">124</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="label">Fuel type:</span>
+                        <span class="value">Diesel</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="label">Fuel cons:</span>
+                        <span class="value">20L/100km</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn badge next-btn" ui-sref="maths">
+                Back
+            </button>
+            <button disabled class="btn badge next-btn" ui-sref="mathsStep3({lineId: $ctrl.lineId, start:1, stop: 42})">
+                Check
+            </button>
+        </div>
+    </div>
+</div>

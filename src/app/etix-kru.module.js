@@ -13,6 +13,9 @@ import 'font-awesome/css/font-awesome.css';
 import appComponent from './app.component';
 import routesConfig from './routes-config';
 import quartersMap from './quarters-map.component';
+import maths from './maths.component';
+import mathsStep2 from './maths-step-2.component';
+import mathsStep3 from './maths-step-3.component';
 import buses from './buses.component';
 
 import './app.scss';
@@ -36,6 +39,9 @@ angular
         });
     })
     .component('quartersMap', quartersMap)
+    .component('maths', maths)
+    .component('mathsStep2', mathsStep2)
+    .component('mathsStep3', mathsStep3)
     .component('buses', buses)
 ;
 

@@ -1,4 +1,73 @@
+.geography {
+    padding: 30px 40px;
 
-#buttons-quarters {
+    .badge {
+        margin: 0;
+    }
+
+    .exercise-time {
+        margin: 0;
+        margin-top: 12px;
+    }
+
+    h2 {
+        text-align: left;
+    }
+}
+
+.container-fluid {
+    padding-left: 0px !important;
+    border-bottom: 1px solid #F3F3F3;
+    padding-bottom: 50px;
+}
+
+.quarters-info {
+    padding-left: 0px !important;
+
+    div {
+        font-size: 20px;
+        margin: 40px 0;
+    }
+
+    .correct-quarters-answer {
+        color: #7ED321;
+    }
+
+    .dropdown-quarters-selection {
+        width: 90%;
+        button {
+            width: 100%;
+            background-color: white;
+            border-bottom: 3px solid #F3F3F3;
+            text-align: left;
+            span.title-current-quarter {
+                display: inline-block;
+                width: 95%;
+            }
+        }
+        ul {
+            width: 100%;
+        }
+        li {
+            padding: 3px 15px;
+        }
+        li:hover {
+            background-color: grey;
+            color: white;
+            cursor: pointer;
+        }
+        .caret {
+            color: #2D93D2;
+            border-width: 8px;
+        }
+    }
+}
+
+.new-quarter {
     text-align: center;
+    padding-top: 20px;
+    a {
+        margin-top: 10px;
+        width: 140px;
+    }
 }

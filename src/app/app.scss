@@ -110,7 +110,8 @@ i.geo-icon {
 }
 
 .angular-google-map-container {
-    height: 500px;
+    height: 350px;
+    margin-top: 30px;
 }
 
 .side-bar {
@@ -192,7 +193,6 @@ i.geo-icon {
     background-color: #F2F5F9;
 
     .card {
-        overflow: auto;
         background-color: #fff;
         border-radius: 8px;
         position: absolute;
@@ -211,23 +211,14 @@ i.geo-icon {
         font-size: 14px;
         color: #B5B5B5;
         float: right;
-        margin: 50px;
         font-family: Proxima;
+        margin-top: 50px;
+        margin-right: 50px;
     }
 
     h2 {
-        text-align: center;
-        width: 100%;
-        margin-top: 55px;
         border-bottom: 1px solid #F3F3F3;
         padding-bottom: 20px;
-    }
-
-    .step {
-        font-family: Proxima;
-        color: #10A2F2;
-        font-size: 23px;
-        margin: 30px 50px;
-        float: left;
+        text-align: left;
     }
 }

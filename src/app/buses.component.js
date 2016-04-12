@@ -30,7 +30,7 @@ class Controller {
         };
 
        this.changeBusLine = () => {
-           this.paths = [];
+          this.paths = [];
            this.stops = [];
 
           $http.get(api + '/bus/' + this.currentBusLine.id).then((data) => {
