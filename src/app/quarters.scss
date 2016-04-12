@@ -1,3 +1,20 @@
+.geography {
+    padding: 30px 40px;
+
+    .badge {
+        margin: 0;
+    }
+
+    .exercise-time {
+        margin: 0;
+        margin-top: 12px;
+    }
+
+    h2 {
+        text-align: left;
+    }
+}
+
 .container-fluid {
     padding-left: 0px !important;
     border-bottom: 1px solid #F3F3F3;
@@ -48,6 +65,7 @@
 
 .new-quarter {
     text-align: center;
+    padding-top: 20px;
     a {
         margin-top: 10px;
         width: 140px;

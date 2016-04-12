@@ -200,7 +200,11 @@ i.geo-icon {
         left: 30px;
         right: 30px;
         bottom: 20px;
-        padding: 30px 40px;
+    }
+
+    .badge {
+        margin-left: 50px;
+        margin-top: 40px;
     }
 
     .exercise-time {
@@ -208,11 +212,11 @@ i.geo-icon {
         color: #B5B5B5;
         float: right;
         font-family: Proxima;
-        margin-top: 12px;
+        margin-top: 50px;
+        margin-right: 50px;
     }
 
     h2 {
-        width: 87%;
         border-bottom: 1px solid #F3F3F3;
         padding-bottom: 20px;
         text-align: left;
