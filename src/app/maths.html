@@ -16,14 +16,25 @@
 </div>
 <div class="main-content maths-exercise">
     <div class="card">
-        <div class="clearfix">
-            <div class="badge">Exercice 1</div>
-            <div class="exercise-time">3 minutes exercise</div>
+        <div class="badge">Exercice 1</div>
+        <div class="exercise-time">3 minutes exercise</div>
+        <div class="step-container">
             <h2>Find out the emissions that your bus produce on your route to school.</h2>
             <h3 class="step">STEP 1</h3>
             <p class="statement">Select your bus stops</p>
             <p class="statement-desc">It will be interesting to pick the bus that you take everyday to go to school.</p>
+            <ul class="lines-container clearfix">
+                <li ng-repeat="line in $ctrl.lines track by $index" ng-class="{'active': $ctrl.selectedLine == line}">
+                    <a ng-click="$ctrl.selectLine(line)">
+                        {{line}}
+                    </a>
+                </li>
+            </ul>
+            <div class="card-footer">
+                <button class="btn badge next-btn" ng-disabled="!$ctrl.selectedLine" ui-sref="mathsStep2({lineId: $ctrl.selectedLine})">
+                    Next
+                </button>
+            </div>
         </div>
-        <buses></buses>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<select ng-model="ctrl.currentBusLine" ng-options="item as item.name for item in ctrl.bus"  ng-change="ctrl.changeBusLine()">
+<!-- <select ng-model="ctrl.currentBusLine" ng-options="item as item.name for item in ctrl.bus"  ng-change="ctrl.changeBusLine()">
 </select>
 
 <div>
@@ -7,7 +7,7 @@
 
     <select ng-model='ctrl.stop' ng-options="item as item.name for item in ctrl.stops" ng-change="ctrl.changeStop()" >
     </select>
-</div>
+</div> -->
 
 <ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom' bounds='ctrl.map.bounds' options="ctrl.map.options">
     <ui-gmap-marker idkey='ctrl.stop.id' coords='ctrl.stop' options='ctrl.stop.options' ></ui-gmap-marker>
@@ -15,7 +15,7 @@
     <ui-gmap-polyline ng-repeat="path in ctrl.paths" path='path' stroke="path.stroke" ></ui-gmap-polyline>
 </ui-gmap-google-map>
 
-<button class="btn btn-primary" ng-click="ctrl.selectStops()" style="margin:10px">Select Stops</button>
+<!-- <button class="btn btn-primary" ng-click="ctrl.selectStops()" style="margin:10px">Select Stops</button>
 <div ng-show="ctrl.loading">
     <i class="fa-li fa fa-spinner fa-spin"></i>
 </div>
@@ -31,3 +31,4 @@
         <dd>20l/100km</dd>
     </dl>
 </div>
+ -->

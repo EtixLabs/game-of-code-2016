@@ -3,7 +3,6 @@
 export default routesConfig;
 
 import categoriesView from './categories.html';
-import mathsView from './maths.html';
 import geographyView from './geography.html';
 
 // @ngInject
@@ -17,7 +16,17 @@ function routesConfig($locationProvider, $urlRouterProvider, $stateProvider) {
 
     $stateProvider.state('maths', {
         url: '/maths',
-        templateUrl: mathsView
+        template: '<maths></maths>'
+    });
+
+    $stateProvider.state('mathsStep2', {
+        url: '/maths/line/:lineId',
+        template: '<maths-step-2></maths-step-2>'
+    });
+
+    $stateProvider.state('mathsStep3', {
+        url: '/maths/line/:lineId/from/:start/to/:stop',
+        template: '<maths-step-3></maths-step-3>'
     });
 
     $stateProvider.state('geography', {
