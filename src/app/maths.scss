@@ -85,8 +85,9 @@
         }
 
         .stops-selector {
-            max-width: 650px;
+            max-width: 710px;
             margin: auto;
+            padding-top: 10px;
 
             .range-distance {
                 display: inline-block;
@@ -95,6 +96,40 @@
                 border-radius: 4px;
                 font-size: 24px;
                 text-align: center;
+                margin: 0px 20px;
+            }
+
+            .dropdown-stop-selection {
+
+                button {
+                    background-color: white;
+                    border-bottom: 3px solid #F3F3F3;
+                    text-align: left;
+                    font-size: 22px;
+
+                    span.title-current-stop {
+                        display: inline-block;
+                        width: 95%;
+                    }
+                }
+                ul {
+                    width: 100%;
+                    max-height: 300px;
+                    overflow: auto;
+                }
+                li {
+                    padding: 3px 15px;
+                }
+                li:hover {
+                    background-color: grey;
+                    color: white;
+                    cursor: pointer;
+                }
+                .caret {
+                    margin-left: 8px;
+                    color: #2D93D2;
+                    border-width: 8px;
+                }
             }
         }
 

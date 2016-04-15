@@ -19,8 +19,26 @@
         <div class="step-container">
             <h3 class="step">STEP 2</h3>
             <div class="stops-selector">
+                <div class="btn-group dropdown-stop-selection" uib-dropdown>
+                    <button ng-model="ctrl.currentQuarter" type="button" class="btn" uib-dropdown-toggle>
+                        <span class="title-current-stop">{{ ctrl.currentQuarter.name || "Select your start station" }}</span><span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" uib-dropdown-menu>
+                        <li ng-click="ctrl.currentQuarter = item; ctrl.itIsAwesome()">Line 1</li>
+                    </ul>
+                </div>
+
                 <div class="range-distance">
                     0km
+                </div>
+
+                <div class="btn-group dropdown-stop-selection" uib-dropdown>
+                    <button ng-model="ctrl.currentQuarter" type="button" class="btn" uib-dropdown-toggle>
+                        <span class="title-current-stop">{{ ctrl.currentQuarter.name || "Select your end station" }}</span><span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" uib-dropdown-menu>
+                        <li ng-click="ctrl.currentQuarter = item; ctrl.itIsAwesome()">Line 1</li>
+                    </ul>
                 </div>
             </div>
         </div>
