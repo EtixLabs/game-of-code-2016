@@ -1,0 +1,6 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+0,DPN,http://mobiliteit.lu,Europe/Luxembourg,,+35224652465,,
+1,AVL,http://autobus.lu,Europe/Luxembourg,,+35247962975,,autobus@vdl.lu
+2,CFL,http://cfl.lu,Europe/Luxembourg,,+35224892489,,
+3,RGTR,http://mobiliteit.lu,Europe/Luxembourg,,+35224652465,,
+4,TICE,http://tice.lu,Europe/Luxembourg,,+3525742321,,info@tice.lu
