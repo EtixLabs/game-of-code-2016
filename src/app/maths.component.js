@@ -20,7 +20,7 @@ class Controller {
     }
 
     selectLine(line) {
-        this.selectedLine = line.number;
+        this.selectedLine = line;
     }
 }
 

@@ -45,7 +45,6 @@ class Controller {
                                this.stops.push(line.geometry);
                            }
                    }
-
                    this.start = this.stops[0];
                    this.changeStart();
                    this.stop = this.stops[this.stops.length - 1];
@@ -75,12 +74,6 @@ class Controller {
                 icon: stopMarker
             }
         }
-
-       $http.get('http://localhost:3000/bus').then((data) => {
-           this.bus = data.data;
-           this.currentBusLine = this.bus[0];
-           this.changeBusLine();
-       });
     }
 
     selectStops() {
