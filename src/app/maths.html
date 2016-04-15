@@ -26,7 +26,7 @@
             <ul class="lines-container clearfix">
                 <li ng-repeat="line in $ctrl.lines track by $index" ng-class="{'active': $ctrl.selectedLine == line}">
                     <a ng-click="$ctrl.selectLine(line)">
-                        {{line}}
+                        {{line.number}}
                     </a>
                 </li>
             </ul>
