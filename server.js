@@ -4,6 +4,21 @@ let express = require('express');
 let cors = require('cors');
 let request = require('request-promise');
 let proj4 = require('proj4');
+let busSchedules = require('./bus-schedules.js');
+let _ = require('lodash');
+
+/**
+ * Example bus schedules retrieval
+ * TODO: Use this to compute time between two stops
+ */
+console.log('Line 5 random trip times:');
+let exampleTimes = busSchedules.getLineTimes(5);
+_.each(exampleTimes, time => {
+    console.log(time.arrival_time, time.stop.stop_name);
+});
+console.log('Time between first and 5th stop');
+console.log(busSchedules.getTimesDifference(exampleTimes[0].arrival_time, exampleTimes[4].arrival_time));
+
 
 let app = express();
 
