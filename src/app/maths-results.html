@@ -1,0 +1,79 @@
+<div class="side-bar">
+    <div class="logo-container">
+        <a ui-sref="categories">
+            <div class="logo"></div>
+        </a>
+    </div>
+    <div class="category">
+        <i class="icon math-icon"></i>
+        <h2>Math</h2>
+    </div>
+    <ul class="exercises">
+        <li class="active"><a>Exercise 1</a></li>
+        <li><a>Exercise 2</a></li>
+        <li><a>Exercise 3</a></li>
+    </ul>
+</div>
+<div class="main-content maths-exercise results">
+    <div class="card">
+        <div class="clearfix">
+            <div class="left-section">
+                <div class="step-container">
+                    <h3 class="step">Results</h3>
+                    <h4 class="answer-title">42Kg CO2</h4>
+                    <h5 class="answer-subtitle">Your answer is correct. Great job !</h5>
+                    <p class="answer-details">
+                        You used real time data to solve this exercise. Now here is some more interesting stuff :
+                    </p>
+                    <div class="data-fact">
+                        <span class="value">1</span>
+                        <span class="details">0.5Kg CO2</span>
+                        <span class="subtitle">Average</span>
+                    </div>
+                    <div class="data-fact next">
+                        <span class="value">25</span>
+                        <span class="details">5Kg CO2</span>
+                        <span class="subtitle">Average</span>
+                    </div>
+                    <div class="data-fact next">
+                        <span class="value"><i class="fa fa-times"></i></span>
+                        <span class="details">0Kg CO2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right-section">
+                <buses></buses>
+                <div class="bus-infos clearfix">
+                    <div class="clearfix">
+                        <span class="label">Line:</span>
+                        <span class="line-number">{{ $ctrl.lineId }}</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="label">Bus type:</span>
+                        <span class="value">Mercedes</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="label">Bus capacity:</span>
+                        <span class="value">124</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="label">Fuel type:</span>
+                        <span class="value">Diesel</span>
+                    </div>
+                    <div class="clearfix">
+                        <span class="label">Fuel cons:</span>
+                        <span class="value">20L/100km</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn badge next-btn" disabled>
+                Share
+            </button>
+            <button disabled class="btn badge next-btn" disabled="">
+                Next exercise
+            </button>
+        </div>
+    </div>
+</div>

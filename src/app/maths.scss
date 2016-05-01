@@ -176,7 +176,7 @@
         }
     }
 
-    &.step3 {
+    &.step3, &.results {
 
         .left-section {
             width: 70%;
@@ -270,6 +270,58 @@
 
             .badge {
                 margin-top: 30px;
+            }
+        }
+    }
+
+    &.results {
+
+        .answer-title, .answer-subtitle, .answer-details {
+            padding-left: 50px;
+            padding-right: 110px;
+            text-align: left;
+            color: green;
+        }
+
+        .answer-title {
+            padding-top: 90px;
+            font-size: 44px;
+        }
+
+        .answer-subtitle, .answer-details {
+            font-size: 24px;
+        }
+
+        .answer-details {
+            color: inherit;
+            padding-top: 15px;
+        }
+
+        .data-fact {
+            float: left;
+            margin-left: 50px;
+            margin-top: 40px;
+
+            &.next {
+                margin-left: 160px;
+            }
+
+            .value {
+                display: block;
+                font-size: 44px;
+                color: lightblue;
+            }
+
+            .details {
+                display: block;
+                font-size: 24px;
+
+            }
+
+            .subtitle {
+                display: block;
+                color: gray;
+                font-family: Proxima;
             }
         }
     }

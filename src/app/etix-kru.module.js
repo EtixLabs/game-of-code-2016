@@ -16,6 +16,7 @@ import quartersMap from './quarters-map.component';
 import maths from './maths.component';
 import mathsStep2 from './maths-step-2.component';
 import mathsStep3 from './maths-step-3.component';
+import mathsResults from './maths-results.component';
 import buses from './buses.component';
 
 import './app.scss';
@@ -42,6 +43,7 @@ angular
     .component('maths', maths)
     .component('mathsStep2', mathsStep2)
     .component('mathsStep3', mathsStep3)
+    .component('mathsResults', mathsResults)
     .component('buses', buses)
 ;
 

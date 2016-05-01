@@ -29,6 +29,11 @@ function routesConfig($locationProvider, $urlRouterProvider, $stateProvider) {
         template: '<maths-step-3></maths-step-3>'
     });
 
+    $stateProvider.state('mathsResults', {
+        url: '/maths/results',
+        template: '<maths-results></maths-results>'
+    });
+
     $stateProvider.state('geography', {
         url: '/geography',
         templateUrl: geographyView
