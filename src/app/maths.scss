@@ -280,7 +280,7 @@
             padding-left: 50px;
             padding-right: 110px;
             text-align: left;
-            color: green;
+            color: #7ED321;
         }
 
         .answer-title {
@@ -308,8 +308,12 @@
 
             .value {
                 display: block;
-                font-size: 44px;
-                color: lightblue;
+                font-size: 38px;
+                color: #10A2F2;
+            }
+
+            &.red .value {
+                color: #ED3D3D;
             }
 
             .details {
